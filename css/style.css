@@ -1678,3 +1678,115 @@ main.home .content-wrapper {
 
 
 
+/* =========================
+   📱 Mobile Responsive
+   ========================= */
+@media (max-width: 768px) {
+
+  /* 全局 */
+  body {
+    font-size: 14px;
+  }
+
+  /* Header */
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .nav-list li a {
+    font-size: 13px;
+  }
+
+  /* Hero */
+  .hero {
+    height: 40vh;
+  }
+
+  .hero-line1 {
+    font-size: 16px;
+  }
+
+  .hero-line2 {
+    font-size: 36px;
+  }
+
+  /* 主体改为单列 */
+  .content-wrapper {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+
+  /* Show cards */
+  .show-card {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .show-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .show-card p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  /* 多链接卡片 */
+  .card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .card-links a {
+    font-size: 12px;
+  }
+
+  /* CP 卡片 */
+  .cp-card {
+    margin-top: 20px;
+  }
+
+  .cp-info h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .cp-info p {
+    font-size: 13px;
+  }
+
+  /* CP 底部图片网格 */
+  .cp-bottom-images {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .bottom-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Footer */
+  .footer p {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+  }
+}
