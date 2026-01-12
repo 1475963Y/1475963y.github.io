@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>AOZ · Le Coq Sportif</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- 主样式（与首页一致） -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* ===== 页面主体 ===== */
+    .page-main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    /* ===== 视频 ===== */
+    .video-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin-bottom: 3rem;
+    }
+
+    .video-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ===== 双图区域 ===== */
+    .duo-images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .duo-images {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .duo-images a img {
+      width: 100%;
+      display: block;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== Header（完全一致） ===== -->
+<header class="header">
+  <div class="nav">
+    <div class="logo">HAEWON × SULLYOON</div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../unread.html">未读消息</a></li>
+        <li><a href="../inside.html" class="active">镜头之内</a></li>
+        <li><a href="../signed.html">署名彼此</a></li>
+        <li><a href="../fragments.html">琐碎片段</a></li>
+        <li><a href="../gallery.html">图集</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== Hero（文字型） ===== -->
+<section class="page-header hero-inside hero-text-only">
+  <div class="hero-text">
+   
+    <p class="hero-line2">LE COQ SPORTIF</p>
+  </div>
+</section>
+
+<!-- ===== Main ===== -->
+<main class="page-main">
+
+  <!-- B站视频 -->
+  <div class="video-wrap">
+    <iframe
+      src="https://player.bilibili.com/player.html?bvid=BV1HGqQY7Ejm&high_quality=1&danmaku=0"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- 双图 -->
+  <div class="duo-images">
+    <a href="https://weibo.com/7916808850/5107631022672712" target="_blank">
+      <img src="../images/duo3_1.jpg" alt="Le Coq  1">
+    </a>
+    <a href="https://weibo.com/6175740216/P6mnxpR0x" target="_blank">
+      <img src="../images/duo3_2.jpg" alt="Le Coq  2">
+    </a>
+    <a href="https://weibo.com/7916808850/5094502843024127" target="_blank">
+      <img src="../images/meet4.jpg" alt="Le Coq  3">
+    </a>
+    <a href="https://weibo.com/7916808850/5095560068990924" target="_blank">
+      <img src="../images/duo3_3.jpg" alt="Le Coq  4">
+    </a>
+    <a href="https://weibo.com/7916808850/5119867109249913" target="_blank">
+      <img src="../images/duo3_4.jpg" alt="Le Coq  3">
+    </a>
+    <a href="https://weibo.com/7916808850/5119865353145814" target="_blank">
+      <img src="../images/duo3_5.jpg" alt="Le Coq  4">
+    </a>
+  </div>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <p>© AOZ · 本站仅供粉丝交流使用 侵删</p>
+</footer>
+
+</body>
+</html>

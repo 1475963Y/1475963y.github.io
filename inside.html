@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>AOZ · 镜头之内</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* 页面主布局 */
+    .page-main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* 小标题样式 */
+    .inside-subtitle {
+      text-align: left;
+      font-size: 1.5rem;
+      margin: 2rem 0 1rem 0;
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* 网格布局，每行 4 个卡片 */
+    .inside-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    /* 手机端自适应，改成 2 列 */
+    @media screen and (max-width: 768px) {
+      .inside-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* 小屏幕再改成 1 列 */
+    @media screen and (max-width: 480px) {
+      .inside-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 锚点导航样式 */
+    .inside-anchor-nav {
+      display: flex;
+      gap: 1.5rem;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+    }
+
+    .inside-anchor-nav a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: 500;
+    }
+
+    .inside-anchor-nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="nav">
+    <div class="logo">HAEWON × SULLYOON</div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="unread.html">未读消息</a></li>
+        <li><a href="inside.html" class="active">镜头之内</a></li>
+        <li><a href="signed.html">署名彼此</a></li>
+        <li><a href="fragments.html">糖分碎片</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header hero-inside">
+  <div class="hero-text">
+    <p class="hero-line1">ALL FOR</p>
+    <p class="hero-line2">SULLYWON</p>
+  </div>
+</section>
+
+<!-- 锚点导航 -->
+<div class="inside-anchor-nav">
+  <a href="#material">物料</a>
+  <a href="#cha">CHA</a>
+  <a href="#encounter">偶遇</a>
+  <a href="#duo">双人活动</a>
+</div>
+
+<main class="page-main">
+
+  <!-- 物料 -->
+  <h2 id="material" class="inside-subtitle">物料</h2>
+  <div class="inside-grid">
+    <div class="inside-card">
+      <a href="https://www.bilibili.com/video/BV1Xwt8ewEug?spm_id_from=333.788.videopod.sections&vd_source=fe08fa5f7c37af21a078281b62d39f99" target="_blank">
+        <div class="inside-img"><img src="images/mat1.jpg" alt="物料1"></div>
+        <div class="divider"></div>
+        <p>无限挑战EP.5 CUT <br>2023.09.15</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="Workdol.html" target="_blank">
+        <div class="inside-img"><img src="images/mat2.jpg" alt="物料2"></div>
+        <div class="divider"></div>
+        <p>Workdol第二季 EP.3 <br>2024.04.18</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="mixx-log-taiwan.html" target="_blank">
+        <div class="inside-img"><img src="images\mat3.jpg" alt="物料3"></div>
+        <div class="divider"></div>
+        <p>MIXX LOG|想念你台湾之旅<br>2024.07.17</p>
+      </a>
+    </div>
+
+    <div class="inside-card">
+      <a href="https://www.bilibili.com/video/BV1LsfhYPEhM/?spm_id_from=333.1391.0.0" target="_blank">
+        <div class="inside-img"><img src="images\show3.jpg" alt="物料5"></div>
+        <div class="divider"></div>
+        <p>月刊吴海媛双人直播 <br>2025.01.12</p>
+      </a>
+    </div>
+
+    <div class="inside-card">
+      <a href="https://weibo.com/7916808850/PgJG1y259" target="_blank">
+        <div class="inside-img"><img src="images\show33.jpg" alt="物料33"></div>
+        <div class="divider"></div>
+        <p>下海实录 <br>2025.03.02</p>
+      </a>
+    </div>
+
+    <div class="inside-card">
+      <a href="https://www.bilibili.com/video/BV1RrZGY1ELZ/?spm_id_from=333.1391.0.0" target="_blank">
+        <div class="inside-img"><img src="images\show2.jpg" alt="物料6"></div>
+        <div class="divider"></div>
+        <p>我抱过姐姐吗? <br>2025.03.27</p>
+      </a>
+    </div>
+     <div class="inside-card">
+      <a href="https://www.bilibili.com/video/BV1ZwMwzMEAW/?spm_id_from=333.1391.0.0" target="_blank">
+        <div class="inside-img"><img src="images\show6.jpg" alt="物料7"></div>
+        <div class="divider"></div>
+        <p>Wango Tango EP.3|LA Vlogs (5′50″)<br>2025.06.12</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://www.bilibili.com/video/BV1cctqzxEwu/?spm_id_from=333.1391.0.0" target="_blank">
+        <div class="inside-img"><img src="images\show7.jpg" alt="物料8"></div>
+        <div class="divider"></div>
+        <p>K版入粉之旅EP.15 with🐣<br>2025.08.07</p>
+      </a>
+    </div>
+
+    <div class="inside-card">
+      <a href="<div class="inside-card">
+      <a href="https://weibo.com/6579260794/5209820026375279" target="_blank">
+        <div class="inside-img"><img src="images\show8.jpg" alt="物料11"></div>
+        <div class="divider"></div>
+        <p>闪现月刊吴海媛cut<br>2025.09.11</p>
+      </a>
+    </div>
+
+ 
+    
+
+    <div class="inside-card">
+      <a href="https://www.bilibili.com/video/BV1xkH6zaEew/?spm_id_from=333.1391.0.0" target="_blank">
+        <div class="inside-img"><img src="images\show5.jpg" alt="物料9"></div>
+        <div class="divider"></div>
+        <p>单身即地狱 EP.1<br>2025.09.12</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://www.bilibili.com/video/BV1EBpizkEBe/?spm_id_from=333.1391.0.0" target="_blank">
+        <div class="inside-img"><img src="images\show5.jpg" alt="物料10"></div>
+        <div class="divider"></div>
+        <p>单身即地狱 EP.2<br>2025.09.19</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- cha -->
+  <h2 id="cha" class="inside-subtitle">Cha</h2>
+  <div class="inside-grid">
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/4976751199912107" target="_blank">
+        <div class="inside-img"><img src="images/cha4.jpg" alt="cha1"></div>
+        <div class="divider"></div>
+        <p>Soñar <br>2023.12.08</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/NAUUtcZoj" target="_blank">
+        <div class="inside-img"><img src="images/cha5.jpg" alt="cha2"></div>
+        <div class="divider"></div>
+        <p>🐻‍❄️🤙🐰🤙✩*ೃ.⋆<br>2024.01.08</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/OkvedbCdf" target="_blank">
+        <div class="inside-img"><img src="images/cha7.jpg" alt="cha3"></div>
+        <div class="divider"></div>
+        <p>𝕓𝕖𝕥𝕥𝕖𝕣 𝕥𝕠𝕘𝕖𝕥𝕙𝕖𝕣★°*ﾟ <br>2024.06.24</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/P5iZymHt0" target="_blank">
+        <div class="inside-img"><img src="images/cha9.jpg" alt="cha4"></div>
+        <div class="divider"></div>
+        <p>˖⁺‧₊˚하얀 눈처럼☃️˚₊‧⁺˖ <br>2024.12.17</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/PxTkRgMKA" target="_blank">
+        <div class="inside-img"><img src="images/cha11.jpg" alt="cha5"></div>
+        <div class="divider"></div>
+        <p>超最强 <br>2025.06.23</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/5214824434765541" target="_blank">
+        <div class="inside-img"><img src="images/cha12.jpg" alt="cha6"></div>
+        <div class="divider"></div>
+        <p>ocean eyes <br>2025.09.25</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/QjBGcrVcf" target="_blank">
+        <div class="inside-img"><img src="images/show1.jpg" alt="cha7"></div>
+        <div class="divider"></div>
+        <p>立瓶子亲亲 <br>2025.12.22</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/Pm9R201rF" target="_blank">
+        <div class="inside-img"><img src="images/cha10.jpg" alt="cha8"></div>
+        <div class="divider"></div>
+        <p>モチロン大好き NSWER·⁺⊹♡ <br>2025.04.07</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/M9koCDMNl" target="_blank">
+        <div class="inside-img"><img src="images/cha1.jpg" alt="cha9"></div>
+        <div class="divider"></div>
+        <p>DICE with🐣<br>2022.10.08</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/MxI5q6Ose" target="_blank">
+        <div class="inside-img"><img src="images/cha2.jpg" alt="cha10"></div>
+        <div class="divider"></div>
+        <p>Young，Dumb，Stupid with🐱<br>2023.03.17</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/N8bwLe1H7" target="_blank">
+        <div class="inside-img"><img src="images/cha3.jpg" alt="cha11"></div>
+        <div class="divider"></div>
+        <p>アイドル with🐱<br>2023.07.03</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/O9RqyaBDH" target="_blank">
+        <div class="inside-img"><img src="images/cha6.jpg" alt="cha12"></div>
+        <div class="divider"></div>
+        <p>Behind the jjyukkyu challenge filmed by SULLYOON with🐶🐱<br>2024.04.15</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/P31AocQW9" target="_blank">
+        <div class="inside-img"><img src="images/cha8.jpg" alt="cha13"></div>
+        <div class="divider"></div>
+        <p>👉🐻‍❄️⊹🐰⊹🐶👈 with🐶<br>2024.12.02</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7916808850/5108299955442465" target="_blank">
+        <div class="inside-img"><img src="images/cha16.jpg" alt="cha16"></div>
+        <div class="divider"></div>
+        <p>꼬옥 붙어있기 (ˊσ̴̶̷̤ ₋̮̑ σ̴̶̷̤ˋ)₊ෆ⃛⁺˚ CUT<br>2024.12.05</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7916808850/5139349169248196" target="_blank">
+        <div class="inside-img"><img src="images/cha17.jpg" alt="cha17"></div>
+        <div class="divider"></div>
+        <p>HELLO82<br>2025.03.01</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/QasuEyJ1i" target="_blank">
+        <div class="inside-img"><img src="images/cha13.jpg" alt="cha14"></div>
+        <div class="divider"></div>
+        <p>Blue Valentine with SUNGJIN<br>2025.10.23</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/5237670483591278" target="_blank">
+        <div class="inside-img"><img src="images/cha14.jpg" alt="cha15"></div>
+        <div class="divider"></div>
+        <p>D-2🚀come and enjoy with🐱<br>2025.11.27</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7710814551/5242019787837199" target="_blank">
+        <div class="inside-img"><img src="images/cha15.jpg" alt="cha16"></div>
+        <div class="divider"></div>
+        <p>🐰🦊🐍 with🐣<br>2025.12.09</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- 偶遇 -->
+  <h2 id="encounter" class="inside-subtitle">偶遇</h2>
+  <div class="inside-grid">
+    <div class="inside-card">
+      <a href="https://weibo.com/7916808850/5094502843024127" target="_blank">
+        <div class="inside-img"><img src="images/meet4.jpg" alt="偶遇1"></div>
+        <div class="divider"></div>
+        <p>Le coq Sportif拍摄 <br>2024.10.28</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/6533088450/PDwNAjbfl" target="_blank">
+        <div class="inside-img"><img src="images/meet1.jpg" alt="偶遇2"></div>
+        <div class="divider"></div>
+        <p>健身房看‍🐻‍❄直播 <br>2025.06.27</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="meet-tokyo.html" target="_blank">
+        <div class="inside-img"><img src="images/meet2.jpg" alt="偶遇3"></div>
+        <div class="divider"></div>
+        <p>双人游东京<br>2025.12.14</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/1007786764/Qkc3y24di" target="_blank">
+        <div class="inside-img"><img src="images/meet3.jpg" alt="偶遇4"></div>
+        <div class="divider"></div>
+        <p>大田综艺录制<br>2025.12.26</p>
+      </a>
+    </div>
+    
+  </div>
+
+  <!-- 双人活动 -->
+  <h2 id="duo" class="inside-subtitle">双人活动</h2>
+  <div class="inside-grid">
+    <div class="inside-card">
+      <a href="https://weibo.com/7916808850/OsUomfTrW" target="_blank">
+        <div class="inside-img"><img src="images/duo1.jpg" alt="双人活动1"></div>
+        <div class="divider"></div>
+        <p>Roger Vivier 快闪活动 <br>2024.03.15</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/7916808850/Otk1MopyV" target="_blank">
+        <div class="inside-img"><img src="images/duo2.jpg" alt="双人活动2"></div>
+        <div class="divider"></div>
+        <p>Golden Goose<br>2024.08.21</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="duo/2024-lecoq.html" target="_blank">
+        <div class="inside-img"><img src="images/duo3.jpg" alt="双人活动3"></div>
+        <div class="divider"></div>
+        <p>Le Coq Sportif<br>2024.10.10</p>
+      </a>
+    </div>
+    <div class="inside-card">
+      <a href="https://weibo.com/6579260794/5222136354704793" target="_blank">
+        <div class="inside-img"><img src="images/duo4.jpg" alt="双人活动4"></div>
+        <div class="divider"></div>
+        <p>WKorea <br>2025.10.15</p>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <p>© AOZ · 本站仅供粉丝交流使用 侵删</p>
+</footer>
+
+</body>
+</html>
+
+
