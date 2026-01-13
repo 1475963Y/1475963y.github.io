@@ -1788,4 +1788,26 @@ main.home .content-wrapper {
     text-align: center;
     padding: 10px;
   }
+
+  /* =========================
+   修复：封面 & 标题间距过大
+   ========================= */
+
+/* 1️⃣ 压缩 divider */
+.show-card .divider {
+  height: 6px;
+  margin: 6px 0;
+}
+
+/* 2️⃣ 干掉 p 的默认外边距 */
+.show-card p,
+.show-text {
+  margin: 4px 0 0;
+}
+
+/* 3️⃣ 图片变成 block，去掉基线空隙 */
+.show-img img {
+  display: block;
+}
+
 }
