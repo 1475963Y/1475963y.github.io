@@ -1796,7 +1796,7 @@ main.home .content-wrapper {
 /* 1️⃣ 压缩 divider */
 .show-card .divider {
   height: 6px;
-  margin: 12px 0;
+  margin: 6px 0;
 }
 
 /* 2️⃣ 干掉 p 的默认外边距 */
@@ -1810,4 +1810,43 @@ main.home .content-wrapper {
   display: block;
 }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 左侧卡片基础缩小 */
+.left-panel {
+  flex: 0 0 220px;
+}
+
+/* 手机端再缩 */
+@media (max-width: 768px) {
+  .left-panel {
+    flex: 0 0 170px;
+  }
+
+  .left-card {
+    padding: 12px;
+  }
+
+  .left-cover img {
+    height: 110px;
+    object-fit: cover;
+  }
 }
