@@ -1830,23 +1830,77 @@ main.home .content-wrapper {
 
 
 
-/* 左侧卡片基础缩小 */
-.left-panel {
-  flex: 0 0 220px;
-}
 
-/* 手机端再缩 */
+/* =========================
+   📱 Mobile：综艺封面一行一个
+   ========================= */
 @media (max-width: 768px) {
-  .left-panel {
-    flex: 0 0 170px;
+
+  /* 左侧区域 */
+  .left-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
   }
 
-  .left-card {
-    padding: 12px;
+  /* 单个综艺卡片 */
+  .show-card {
+    width: 100%;
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
   }
 
-  .left-cover img {
-    height: 110px;
+  /* 链接撑满 */
+  .show-card a {
+    display: block;
+    width: 100%;
+  }
+
+  /* 封面图：横向大图 */
+  .show-img img {
+    width: 100%;
+    height: 180px;
     object-fit: cover;
+    border-radius: 12px;
+  }
+
+  /* 分割线缩小 */
+  .show-card .divider {
+    height: 4px;
+    margin: 6px 0;
+  }
+
+  /* 标题文字 */
+  .show-card p,
+  .show-text {
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 0 6px 6px;
+  }
+
+  /* 多链接那种卡片 */
+  .card-links {
+    padding: 0 6px 8px;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .card-links a {
+    font-size: 12px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
