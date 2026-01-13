@@ -1677,3 +1677,126 @@ main.home .content-wrapper {
 
 
 
+/* =========================
+   📱 Mobile · Left / Right Logic
+   ========================= */
+@media (max-width: 768px) {
+
+  /* ===== 主体结构 ===== */
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 12px;
+  }
+
+  /* =====================
+     左 · SHOW 列表区域
+     ===================== */
+  .left-section {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .left-section::before {
+    content: "SHOW LIST";
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #999;
+    margin-bottom: 10px;
+  }
+
+  .show-card {
+    margin-bottom: 16px;
+  }
+
+  .show-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .show-card p,
+  .show-text {
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .card-links {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 6px;
+  }
+
+  .card-links a {
+    font-size: 12px;
+  }
+
+  /* =====================
+     右 · CP 信息卡片
+     ===================== */
+  .right-section {
+    width: 100%;
+    background: #f7f7f9;
+    border-radius: 16px;
+    padding: 14px;
+    border: 1px solid #eee;
+  }
+
+  .right-section::before {
+    content: "CP INFO";
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #aaa;
+    margin-bottom: 10px;
+  }
+
+  .cp-card {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .cp-top-img img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .cp-info h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .cp-info p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* CP 图片墙：更像“右栏缩略图” */
+  .cp-bottom-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .bottom-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  /* Footer */
+  .footer p {
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+  }
+}
