@@ -1796,7 +1796,7 @@ main.home .content-wrapper {
 /* 1️⃣ 压缩 divider */
 .show-card .divider {
   height: 6px;
-  margin: 3px 0;
+  margin: 12px 0;
 }
 
 /* 2️⃣ 干掉 p 的默认外边距 */
