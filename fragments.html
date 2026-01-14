@@ -14,6 +14,163 @@
 
 
 
+  <!-- 主样式 + 分页样式 + 全局平滑滚动 -->
+  <style type="text/css">
+    /* 全局样式重置（可选，优化布局） */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* 标签筛选容器样式 */
+    .tag-filter {
+      margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+    }
+
+    .tag-filter h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .filter-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      padding: 8px 16px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      background-color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    /* 隐藏原生radio按钮 */
+    input[name="filter"] {
+      display: none;
+    }
+
+    /* 选中标签高亮样式 */
+    input[name="filter"]:checked + .filter-btn {
+      background-color: #333;
+      color: #fff;
+      border-color: #333;
+    }
+
+    /* 时间轴条目样式（优化展示，可选） */
+    .timeline-list {
+      margin: 30px 0;
+    }
+
+    .timeline-item {
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item h4 {
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .timeline-item p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* 全局启用平滑滚动，提升置顶体验兼容性 */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* 分页容器样式 */
+    .pagination-container {
+      margin: 60px auto;
+      text-align: center;
+      clear: both;
+    }
+
+    /* 分页按钮通用样式 */
+    .pagination-btn {
+      font-family: 'Inter', sans-serif;
+      background-color: transparent;
+      border: 1px solid #ddd;
+      color: #333;
+      padding: 8px 16px;
+      margin: 0 4px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 14px;
+    }
+
+    /* 分页按钮禁用状态样式 */
+    .pagination-btn:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+      border-color: #eee;
+      color: #999;
+    }
+
+    /* 分页按钮悬浮效果（非禁用状态） */
+    .pagination-btn:not(:disabled):hover {
+      background-color: #f5f5f5;
+      border-color: #ccc;
+    }
+
+    /* 页码按钮样式 */
+    .pagination-numbers .page-number {
+      font-family: 'Inter', sans-serif;
+      background-color: transparent;
+      border: 1px solid #ddd;
+      color: #333;
+      padding: 8px 16px;
+      margin: 0 4px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+      font-size: 14px;
+    }
+
+    /* 当前页码高亮样式 */
+    .pagination-numbers .page-number.active {
+      background-color: #333;
+      color: #fff;
+      border-color: #333;
+    }
+
+    /* 页码按钮悬浮效果（非当前页） */
+    .pagination-numbers .page-number:not(.active):hover {
+      background-color: #f5f5f5;
+      border-color: #ccc;
+    }
+
+    /* 页脚样式 */
+    .footer {
+      margin-top: 50px;
+      text-align: center;
+      color: #999;
+      font-size: 12px;
+    }
+  </style>
+
+
 </head>
 
 <body>
@@ -3665,20 +3822,28 @@
       </a>
     </article>
 
-      <article class="timeline-item  tag-stage tag-cut   ">
+  <article class="timeline-item tag-stage tag-cut tag-official">
       <span class="timeline-dot"></span>
-      <a href="https://weibo.com/7946863332/5222445548309949" class="timeline-link">
-        <div class="timeline-card">
-          <span class="timeline-date">2025.10.16</span>
-          <p class="timeline-text">
-          23味采访
-          </p>
-          <div class="timeline-tags">
-            <span>#MCD</span>
-          </div>
+
+     <!-- 主链接：整卡 -->
+
+    <div class="timeline-card">
+      <span class="timeline-date">2025.10.16</span>
+
+      <p class="timeline-text">
+        MCD
+      </p>
+
+      <!-- 子链接区 -->
+      <div class="timeline-tags">
+
+        <a href="https://weibo.com/7946863332/5222445548309949" class="tag-link">23味采访</a>
+        <a href="https://weibo.com/6579260794/Q9p2h8qzc" class="tag-link">双人自拍</a>
         </div>
-      </a>
-    </article>
+      </div>
+     </a>
+   </article>
+
 
       <article class="timeline-item  tag-stage tag-cut   ">
       <span class="timeline-dot"></span>
@@ -4155,17 +4320,6 @@
    </article>
 
 
-
-
-
-
-
-
-
-
-
-
-
       <article class="timeline-item  tag-official ">
       <span class="timeline-dot"></span>
       <a href="https://weibo.com/7916808850/5250360097640143" class="timeline-link">
@@ -4419,7 +4573,7 @@
       <!-- 子链接区 -->
       <div class="timeline-tags"
 
-     ">
+     >
         <a href="https://weibo.com/6462533156/QmustuTlj" class="tag-link">图 围巾line</a>
         <a href="https://weibo.com/6627825137/QmvNAwHiR " class="tag-link">频 围巾line</a>
         <a href="https://weibo.com/7799069788/5253604665198111" class="tag-link">频 围巾line</a>
@@ -4458,7 +4612,20 @@
      </a>
    </article>
 
-
+    <article class="timeline-item  tag-variety  ">
+      <span class="timeline-dot"></span>
+      <a href="https://www.bilibili.com/video/BV1o8rLBGEkB/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=fe08fa5f7c37af21a078281b62d39f99" class="timeline-link">
+        <div class="timeline-card">
+          <span class="timeline-date">2026.01.13</span>
+          <p class="timeline-text">
+          大田之旅
+          </p>
+          <div class="timeline-tags">
+            <span>#只要有空4 预告</span>
+          </div>
+        </div>
+      </a>
+    </article>
 
 
 
@@ -4468,12 +4635,211 @@
 
   </section>
 
+
+  <!-- ===== 分页组件 ===== -->
+  <section class="pagination-container" style="margin: 50px auto; text-align: center;">
+    <button class="pagination-btn" id="prev-page" disabled>上一页</button>
+    <div class="pagination-numbers" id="pagination-numbers"></div>
+    <button class="pagination-btn" id="next-page">下一页</button>
+  </section>
+
 </main>
 
 
 <footer class="footer">
   <p>© wb鹦鹉魚修复室  · 本站仅供粉丝交流使用 侵删</p>
 </footer>
+
+
+
+
+
+
+ <!-- 核心JS：分页+筛选+置顶 -->
+  <script type="text/javascript">
+    // 配置项：自定义每页显示的条目数量
+    const itemsPerPage = 20;
+    
+    // 全局变量：记录当前分页状态和筛选状态
+    let currentPage = 1;
+    let activeTag = 'all'; // 默认激活「全部」标签
+    let filteredItems = []; // 存储当前标签筛选后的有效条目
+    const allTimelineItems = Array.from(document.querySelectorAll('.timeline-item')); // 所有时间轴条目（转为数组方便操作）
+    
+    // 获取分页相关元素
+    const prevPageBtn = document.getElementById('prev-page');
+    const nextPageBtn = document.getElementById('next-page');
+    const paginationNumbers = document.getElementById('pagination-numbers');
+
+    // ===== 页面置顶辅助函数（平滑滚动到顶端） =====
+    function scrollToPageTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // 平滑滚动，兼容html的scroll-behavior
+      });
+    }
+    
+    // 1. 初始化：绑定标签筛选事件 + 初始化分页
+    function initAll() {
+      bindTagFilterEvent(); // 绑定标签筛选事件
+      updateFilteredItems(); // 初始化筛选条目（默认全部）
+      initPagination(); // 初始化分页
+    }
+
+    // 2. 绑定标签筛选事件（恢复tag分类功能）
+    function bindTagFilterEvent() {
+      const allFilterRadios = document.querySelectorAll('input[name="filter"]');
+      allFilterRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+          // 更新当前激活标签（从radio的id中提取，如 filter-all → all）
+          activeTag = this.id.replace('filter-', '');
+          currentPage = 1; // 切换标签时，重置分页到第1页
+          updateFilteredItems(); // 更新筛选后的条目
+          initPagination(); // 重新初始化分页（基于新的筛选结果）
+          scrollToPageTop(); // 切换标签后，页面自动置顶
+        });
+      });
+    }
+
+    // 3. 更新当前标签筛选后的有效条目
+    function updateFilteredItems() {
+      if (activeTag === 'all') {
+        // 「全部」标签：保留所有条目
+        filteredItems = [...allTimelineItems];
+      } else {
+        // 其他标签：筛选出包含对应tag类名的条目（如 tag-official）
+        const targetTagClass = `tag-${activeTag}`;
+        filteredItems = allTimelineItems.filter(item => {
+          return item.classList.contains(targetTagClass);
+        });
+      }
+    }
+
+    // 4. 初始化分页（基于筛选后的条目）
+    function initPagination() {
+      // 先隐藏所有时间轴条目
+      allTimelineItems.forEach(item => {
+        item.style.display = 'none';
+      });
+      
+      // 生成分页页码按钮
+      generatePaginationNumbers();
+      
+      // 显示当前页对应的条目
+      displayCurrentPageItems();
+      
+      // 更新分页按钮状态（禁用/启用）
+      updatePaginationBtnStatus();
+    }
+
+    // 5. 生成分页页码按钮（1、2、3...，基于筛选后的总页数）
+    function generatePaginationNumbers() {
+      // 清空现有页码
+      paginationNumbers.innerHTML = '';
+      const totalPages = getTotalPages(); // 基于筛选结果获取总页数
+      
+      // 循环生成页码按钮
+      for (let i = 1; i <= totalPages; i++) {
+        const pageBtn = document.createElement('button');
+        pageBtn.className = 'page-number';
+        pageBtn.innerText = i;
+        pageBtn.dataset.page = i;
+        
+        // 高亮当前页码
+        if (i === currentPage) {
+          pageBtn.classList.add('active');
+        }
+        
+        // 页码点击事件（包含置顶逻辑）
+        pageBtn.onclick = function() {
+          currentPage = parseInt(this.dataset.page);
+          displayCurrentPageItems();
+          updatePaginationNumbersHighlight();
+          updatePaginationBtnStatus();
+          scrollToPageTop(); // 切换页码后，页面自动置顶
+        };
+        
+        paginationNumbers.appendChild(pageBtn);
+      }
+    }
+
+    // 6. 显示当前页对应的条目（基于筛选后的条目）
+    function displayCurrentPageItems() {
+      const totalPages = getTotalPages();
+      if (totalPages === 0) return; // 无有效条目时，直接返回
+      
+      // 计算当前页的条目起始和结束索引
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = Math.min(startIndex + itemsPerPage, filteredItems.length);
+      
+      // 先隐藏所有条目，再显示当前页的有效条目
+      allTimelineItems.forEach(item => {
+        item.style.display = 'none';
+      });
+      filteredItems.forEach((item, index) => {
+        if (index >= startIndex && index < endIndex) {
+          item.style.display = 'block';
+        }
+      });
+    }
+
+    // 7. 更新页码高亮状态
+    function updatePaginationNumbersHighlight() {
+      const allPageNumbers = document.querySelectorAll('.page-number');
+      allPageNumbers.forEach(pageBtn => {
+        const page = parseInt(pageBtn.dataset.page);
+        if (page === currentPage) {
+          pageBtn.classList.add('active');
+        } else {
+          pageBtn.classList.remove('active');
+        }
+      });
+    }
+
+    // 8. 更新上一页/下一页按钮状态（边界禁用）
+    function updatePaginationBtnStatus() {
+      const totalPages = getTotalPages();
+      // 第一页或无有效条目时，禁用上一页
+      prevPageBtn.disabled = currentPage === 1 || totalPages === 0;
+      // 最后一页或无有效条目时，禁用下一页
+      nextPageBtn.disabled = currentPage === totalPages || totalPages === 0;
+    }
+
+    // 9. 辅助函数：获取基于筛选结果的总页数
+    function getTotalPages() {
+      return Math.ceil(filteredItems.length / itemsPerPage);
+    }
+
+    // 10. 上一页/下一页点击事件（包含置顶逻辑）
+    prevPageBtn.onclick = function() {
+      const totalPages = getTotalPages();
+      if (currentPage > 1 && totalPages > 0) {
+        currentPage--;
+        displayCurrentPageItems();
+        updatePaginationNumbersHighlight();
+        updatePaginationBtnStatus();
+        scrollToPageTop(); // 上一页切换后，页面自动置顶
+      }
+    };
+
+    nextPageBtn.onclick = function() {
+      const totalPages = getTotalPages();
+      if (currentPage < totalPages && totalPages > 0) {
+        currentPage++;
+        displayCurrentPageItems();
+        updatePaginationNumbersHighlight();
+        updatePaginationBtnStatus();
+        scrollToPageTop(); // 下一页切换后，页面自动置顶
+      }
+    };
+
+    // 页面加载完成后自动初始化所有功能
+    window.onload = function() {
+      initAll();
+    };
+  </script>
+
+
 
 </body>
 </html>
